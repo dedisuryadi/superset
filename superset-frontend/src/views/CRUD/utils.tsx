@@ -321,6 +321,7 @@ export function handleDashboardDelete(
 }
 
 export function shortenSQL(sql: string, maxLines: number) {
+  if (!sql) return '';
   let lines: string[] = sql.split('\n');
   if (lines.length >= maxLines) {
     lines = lines.slice(0, maxLines);
