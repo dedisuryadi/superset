@@ -197,6 +197,9 @@ class SupersetAppInitializer:  # pylint: disable=too-many-public-methods
             TableSchemaView,
             TabStateView,
         )
+        from superset.views.lab import (
+            Lab
+        )
         from superset.views.tags import TagView
         from superset.views.users.api import CurrentUserRestApi
 
@@ -310,6 +313,7 @@ class SupersetAppInitializer:  # pylint: disable=too-many-public-methods
         appbuilder.add_view_no_menu(SavedQueryViewApi)
         appbuilder.add_view_no_menu(SliceAsync)
         appbuilder.add_view_no_menu(SqlLab)
+        appbuilder.add_view_no_menu(Lab)
         appbuilder.add_view_no_menu(SqlMetricInlineView)
         appbuilder.add_view_no_menu(AnnotationModelView)
         appbuilder.add_view_no_menu(Superset)
@@ -348,6 +352,15 @@ class SupersetAppInitializer:  # pylint: disable=too-many-public-methods
             href="/savedqueryview/list/",
             icon="fa-save",
             category="SQL Lab",
+        )
+        appbuilder.add_link(
+            "Visual Analytic",
+            label=_("Visual Analytic"),
+            href="/lab/visualanalytic/",
+            category_icon="fa-map-marked-alt",
+            icon="fa-map-marked-alt",
+            category="SQL Lab",
+            category_label=__("SQL Lab"),
         )
         appbuilder.add_link(
             "Query Search",
