@@ -94,6 +94,14 @@ const SavedQueryList = lazy(
       /* webpackChunkName: "SavedQueryList" */ 'src/views/CRUD/data/savedquery/SavedQueryList'
     ),
 );
+const Mobility = lazy(
+  () =>
+    import(
+      /* webpackChunkName: "Mobility" */ 'src/components/Mobility/Mobility'
+    ),
+);
+
+// const Mobility = import('src/components/Mobility/Mobility');
 
 type Routes = {
   path: string;
@@ -168,6 +176,10 @@ export const routes: Routes = [
     props: {
       isReportEnabled: true,
     },
+  },
+  {
+    path: '/lab/visualanalytic/',
+    Component: Mobility,
   },
 ];
 
