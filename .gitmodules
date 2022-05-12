@@ -39,3 +39,7 @@
 [submodule ".github/actions/github-action-push-to-another-repository"]
 	path = .github/actions/github-action-push-to-another-repository
 	url = https://github.com/cpina/github-action-push-to-another-repository
+[submodule "superset-frontend/packages/uzzeet-webgl"]
+	path = superset-frontend/packages/uzzeet-webgl
+	url = https://gitlab.com/t6312/uzzeet-webgl.git
+	branch = feat/superset
