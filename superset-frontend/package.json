@@ -201,6 +201,7 @@
     "urijs": "^1.19.8",
     "use-immer": "^0.6.0",
     "use-query-params": "^1.1.9",
+    "uzzeet-webgl": "file:./packages/uzzeet-webgl",
     "yargs": "^15.4.1"
   },
   "devDependencies": {

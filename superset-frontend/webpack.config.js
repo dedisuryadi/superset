@@ -337,12 +337,20 @@ const config = {
       {
         test: /\.jsx?$/,
         // include source code for plugins, but exclude node_modules and test files within them
-        exclude: [/superset-ui.*\/node_modules\//, /\.test.jsx?$/],
+        exclude: [
+          /superset-ui.*\/node_modules\//,
+          /uzzeet.*\/node_modules\//,
+          /\.test.jsx?$/,
+        ],
         include: [
           new RegExp(`${APP_DIR}/(src|.storybook|plugins|packages)`),
-          ...['./src', './.storybook', './plugins', './packages'].map(p =>
-            path.resolve(__dirname, p),
-          ), // redundant but required for windows
+          ...[
+            './src',
+            './.storybook',
+            './plugins',
+            './packages',
+            // './node_modules/uzzeet-webgl',
+          ].map(p => path.resolve(__dirname, p)), // redundant but required for windows
           /@encodable/,
         ],
         use: [babelLoader],
