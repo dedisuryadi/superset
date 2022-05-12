@@ -364,6 +364,15 @@ export default function MenuWrapper({ data, ...rest }: MenuProps) {
     }
   });
 
+  cleanedMenu
+    .find(v => v.name === 'SQL Lab')
+    ?.childs?.push({
+      icon: 'fa-map-marked-alt',
+      label: 'Visual Analytic',
+      name: 'Visual Analytic',
+      url: '/lab/visualanalytic/',
+    });
+
   newMenuData.menu = cleanedMenu;
   newMenuData.settings = settings;
 
