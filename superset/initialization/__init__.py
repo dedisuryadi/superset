@@ -115,6 +115,7 @@ class SupersetAppInitializer:  # pylint: disable=too-many-public-methods
         # pylint: disable=import-outside-toplevel,too-many-locals,too-many-statements
         from superset.annotation_layers.annotations.api import AnnotationRestApi
         from superset.annotation_layers.api import AnnotationLayerRestApi
+        from superset.insights.api import InsightsLayerRestApi
         from superset.async_events.api import AsyncEventsRestApi
         from superset.cachekeys.api import CacheRestApi
         from superset.charts.api import ChartRestApi
@@ -205,6 +206,7 @@ class SupersetAppInitializer:  # pylint: disable=too-many-public-methods
         #
         appbuilder.add_api(AnnotationRestApi)
         appbuilder.add_api(AnnotationLayerRestApi)
+        appbuilder.add_api(InsightsLayerRestApi)
         appbuilder.add_api(AsyncEventsRestApi)
         appbuilder.add_api(CacheRestApi)
         appbuilder.add_api(ChartRestApi)
